@@ -1,6 +1,7 @@
-import { Box } from "@modulz/design-system";
+import { Box, Link, Paragraph } from "@modulz/design-system";
 import { Header } from "../components/header";
 import { Hero } from "../components/hero";
+import { TitleAndMetaTags } from "../components/title-and-meta-tags";
 
 export default function Home() {
   return (
@@ -21,8 +22,15 @@ export default function Home() {
           },
         }}
       />
+      <TitleAndMetaTags />
       <Header />
       <Hero />
+      <Box css={{ position: "absolute", bottom: "$2", right: "$4" }}>
+        <Paragraph size="2" css={{ fontSize: "$1", opacity: 0.6 }}>
+          This page was heavily inspired by{" "}
+          <Link href="https://stitches.dev">stitches.dev</Link> landing
+        </Paragraph>
+      </Box>
     </>
   );
 }
