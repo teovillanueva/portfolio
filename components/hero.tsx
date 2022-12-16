@@ -21,11 +21,9 @@ export function Hero() {
         pt: "$9",
         ai: "center",
 
-        "@bp2": {
-          pt: "$6",
-          display: "flex",
-          height: "calc(100vh - 65px)",
-        },
+        display: "flex",
+        height: "calc(100vh - 65px)",
+        "@bp2": {},
       }}
     >
       <Container size="3" css={{ flex: 1 }}>
@@ -61,6 +59,10 @@ export function Hero() {
         </Paragraph>
         <Flex css={{ "@bp2": { jc: "center", my: "$5" } }}>
           <HomepageButton
+            color={{
+              "@initial": "violet",
+              "@bp2": "gray",
+            }}
             as="a"
             href="https://github.com/teovillanueva"
             target="_blank"

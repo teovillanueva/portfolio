@@ -31,7 +31,7 @@ function App({ Component, pageProps }: AppProps) {
   return (
     <DesignSystemProvider>
       <ThemeProvider
-        // disableTransitionOnChange
+        disableTransitionOnChange
         attribute="class"
         value={{ light: "light-theme", dark: darkTheme.className }}
         defaultTheme="system"

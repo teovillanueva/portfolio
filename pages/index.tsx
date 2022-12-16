@@ -28,7 +28,10 @@ export default function Home() {
       <Box css={{ position: "absolute", bottom: "$2", right: "$4" }}>
         <Paragraph size="2" css={{ fontSize: "$1", opacity: 0.6 }}>
           This page was heavily inspired by{" "}
-          <Link href="https://stitches.dev">stitches.dev</Link> landing
+          <Link target="_blank" href="https://stitches.dev">
+            stitches.dev
+          </Link>{" "}
+          landing page
         </Paragraph>
       </Box>
     </>
