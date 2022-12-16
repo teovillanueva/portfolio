@@ -6,6 +6,7 @@ import {
   darkTheme,
   globalCss,
 } from "@modulz/design-system";
+import { Analytics } from "@vercel/analytics/react";
 
 const globalStyles = globalCss({
   html: {
@@ -29,16 +30,19 @@ function App({ Component, pageProps }: AppProps) {
   globalStyles();
 
   return (
-    <DesignSystemProvider>
-      <ThemeProvider
-        disableTransitionOnChange
-        attribute="class"
-        value={{ light: "light-theme", dark: darkTheme.className }}
-        defaultTheme="system"
-      >
-        <Component {...pageProps} />
-      </ThemeProvider>
-    </DesignSystemProvider>
+    <>
+      <DesignSystemProvider>
+        <ThemeProvider
+          disableTransitionOnChange
+          attribute="class"
+          value={{ light: "light-theme", dark: darkTheme.className }}
+          defaultTheme="system"
+        >
+          <Component {...pageProps} />
+        </ThemeProvider>
+      </DesignSystemProvider>
+      <Analytics />
+    </>
   );
 }
 
